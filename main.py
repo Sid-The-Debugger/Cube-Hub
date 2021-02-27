@@ -48,20 +48,9 @@ def counter_label(label):
     count()       
     
 def export_times():
-  try:
-    with open("rubik's_time_table.txt", "r") as j:
-      temp = f.readlines()
-    temp = [x.strip() for x in temp] 
+  with open("rubik's_time_table.txt", 'w') as f:
     for item in time_data:
-      temp.append(item + "\n")
-    with open("rubik's_time_table.txt", 'w') as f:
-      for item in temp:
-        f.write(item)
-  except:
-    with open("rubik's_time_table.txt", 'w') as f:
-      for item in time_data:
-        f.write("%s\n" % item)
-
+      f.write("%s\n" % item)
 # start function of the stopwatch  
 def Start(label):  
     global running  
