@@ -5,6 +5,8 @@ from tkinter.ttk import *
 from tkinter import messagebox
 from datetime import datetime
 
+# test commit
+
 time_data = []
 counter = 66600
 running = False
@@ -33,7 +35,7 @@ def counter_label(label):
                 display = convert(elapsed)
                 elapsed += 1  
     
-            label['text']=display   # Or label.config(text=display)  
+            label['text'] = display   # Or label.config(text=display)  
     
             # label.after(arg1, arg2) delays by   
             # first argument given in milliseconds  
@@ -96,7 +98,13 @@ def Stop():
     label['text']='Stopwatch'
 
 moves = ["U", "D", "F", "B", "R", "L"]
-dir = ["", "'", "2"]
+dir = []
+dir1 = ["" for _ in range(randint(1, 3))]
+dir2 = ["'" for _ in range(randint(1, 3))]
+dir3 = ["2" for _ in range(randint(1, 3))]
+dir.extend(dir1)
+dir.extend(dir2)
+dir.extend(dir3)
 
 def gen_scramble(length):
     # Make array of arrays that represent moves ex. U' = ["U", "'"]
